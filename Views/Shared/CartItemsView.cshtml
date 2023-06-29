@@ -1,0 +1,15 @@
+@model Product 
+@{
+    string imgDataURL = Model.Image == null ? "" : Model.Image.ByteArrayToImg();
+    int count = Convert.ToInt32(ViewData["Count"]);
+}
+<div id="boxContainer">
+    <div id="box">
+        <img src="@imgDataURL" />
+        <h3>@Model.Name  ×  @count</h3>
+        <h4>Amount: SYP @Model.Price</h4>
+        <a asp-controller="Home" asp-action="RemoveItem" asp-route-Id="@Model.Id">
+            <button class="removeItem">Remove Item</button>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+@model Cart
+@{
+  int Id = 0;
+  try {
+    Id = ViewBag.Id;
+  } catch {}
+}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CART | E-COMMERCE WEBSITE</title>
+    <link rel="stylesheet" asp-href-include="/css/cart.css" asp-append-version="true"/>
+    <link rel="stylesheet" asp-href-include="/css/footer.css" asp-append-version="true"/>
+    <link rel="stylesheet" asp-href-include="/css/header.css" asp-append-version="true"/>
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo"
+      type="image/gif"
+      sizes="16x16" />
+    <!-- header links -->
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div id="1"></div>
+    @await Component.InvokeAsync("Header")
+    <!-- CART CONTAINER -->
+    <div id="cartMainContainer">
+      <h1>Cart Info</h1>
+      <h3 id="totalItem">Total Items: @Model.Lines.Count</h3>
+
+      <div id="cartContainer">
+        <!-- JS rendered code -->
+        @foreach (CartLine line in Model?.Lines) {
+          ViewData["Count"] = line.Quantity;
+          <partial name="CartItemsView" model="@line.product"/>
+        }
+      </div>
+      <div id="button">
+        @if (Id != 0) {
+          <a asp-controller="Home" asp-action="Preview" asp-route-Id="@Id"><button>Go Back</button></a>
+        }
+        else {
+          <a asp-controller="Home" asp-action="Index"><button>Go Back</button></a>
+        }
+        @if (Model.Lines.Count > 0) {
+          <a asp-controller="Home" asp-action="CheckOut"><button>Check Out</button></a>
+        }
+      </div>
+    </div>
+  </body>
+  <!-- FOOTER -->
+  <div id="4"></div>
+    @await Component.InvokeAsync("Footer")
+</html>

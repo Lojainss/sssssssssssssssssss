@@ -1,0 +1,153 @@
+@model IProduct
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>E-COMMERCE WEBSITE</title>
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo"
+      type="image/gif"
+      sizes="16x16" />
+    <!-- header links -->
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400"
+      rel="stylesheet" />
+    <link rel="stylesheet" asp-href-include="/css/content.css" asp-append-version="true"/>
+    <link rel="stylesheet" asp-href-include="/css/footer.css" asp-append-version="true"/>
+    <link rel="stylesheet" asp-href-include="/css/header.css" asp-append-version="true"/>
+
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <div id="1"></div>
+    @await Component.InvokeAsync("Header")
+    <!-- SLIDER -->
+    <div id="2"></div>
+        <style>
+      .slider-container {
+        transform: translateY(80px);
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .slider {
+        display: flex;
+        width: 300%;
+        animation: slideAnimation 20s infinite;
+      }
+
+      .slide {
+        width: 100vw;
+        height: 100%;
+      }
+
+      @@keyframes slideAnimation {
+        0% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(-100vw);
+        }
+        50% {
+          transform: translateX(-200vw);
+        }
+        75% {
+          transform: translateX(-300vw);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+    </style>
+    <section class="slider-container">
+      <div class="slider">
+        <img src="/img/img1.png" alt="Image 1" class="slide" />
+        <img src="/img/img2.png" alt="Image 2" class="slide" />
+        <img src="/img/img3.png" alt="Image 3" class="slide" />
+        <img src="/img/img4.png" alt="Image 3" class="slide" />
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script>
+    // Wait for the page to load
+    document.addEventListener("DOMContentLoaded", function () {
+      // Get the slider container and individual slides
+      var sliderContainer = document.querySelector(".slider-container");
+      var slides = document.querySelectorAll(".slide");
+
+      // Initialize variables
+      var currentSlide = 0;
+      var slideInterval = null;
+
+      // Function to start the slide animation
+      function startSlider() {
+        slideInterval = setInterval(function () {
+          // Move to the next slide
+          currentSlide++;
+          if (currentSlide >= slides.length) {
+            currentSlide = 0;
+          }
+
+          // Calculate the translateX value to show the next slide
+          var translateXValue = -currentSlide * 100;
+
+          // Apply the transform style to the slider
+          sliderContainer.style.transform =
+            "translateX(" + translateXValue + "%)";
+        }, 5000); // Change slide every 5 seconds
+      }
+
+      // Function to stop the slide animation
+      function stopSlider() {
+        clearInterval(slideInterval);
+      }
+
+      // Start the slider
+      startSlider();
+
+      // Pause the slider when mouse enters the container
+      sliderContainer.addEventListener("mouseenter", function () {
+        stopSlider();
+      });
+
+      // Resume the slider when mouse leaves the container
+      sliderContainer.addEventListener("mouseleave", function () {
+        startSlider();
+      });
+    });
+  </script>
+    <!-- CONTENT SECTION -->
+    <div id="3"></div>
+    <div id="mainContainer">
+      <h1 id="mainClothing">clothing for men and women</h1>
+      <div id="containerClothing">
+          @foreach (Product item in Model.Products.Where(x => x.Genre == "Clothes")) {
+            <partial name="ProductOuterView" model="@item" />
+          }      
+      </div>
+
+      <h1 id="mainAccessories">accessories for men and women</h1>
+      <div id="containerAccessories">
+          @foreach (Product item in Model.Products.Where(x => x.Genre == "Accessory")) {
+            <partial name="ProductOuterView" model="@item" />
+          }
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="4"></div>
+    @await Component.InvokeAsync("Footer")
+  </body>
+
+  <!-- content JS -->
+  <script src="/js/content.js"></script>
+</html>

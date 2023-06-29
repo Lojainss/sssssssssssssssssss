@@ -1,0 +1,31 @@
+<header id="container">
+  <!-- SHOP NAME -->
+  <div id="shopName">
+    <a asp-controller="Home" asp-action="Index"> <b>NEW</b>MARKET</a>
+  </div>
+  <!-- COLLCETIONS ON WEBSITE -->
+  <div id="collection">
+    <div id="clothing"><a asp-controller="Home" asp-action="Index" asp-fragment="mainContainer"> CLOTHING </a></div>
+    <div id="accessories">
+      <a asp-controller="Home" asp-action="Index" asp-fragment="mainAccessories"> ACCESSORIES </a>
+    </div>
+  </div>
+  <!-- SEARCH SECTION -->
+  <div id="search">
+    <i class="fas fa-search search"></i>
+    <input
+      type="text"
+      id="input"
+      name="searchBox"
+      placeholder="Search for Clothing and Accessories" />
+  </div>
+  <!-- USER SECTION (CART AND USER ICON) -->
+  <div id="user">
+    <a asp-controller="Home" asp-action="Cart" class="badgeContainer">
+      <i class="fas fa-shopping-cart addedToCart">
+        <div id="badge">0</div>
+      </i>
+    </a>
+    <a href="#"> <i class="fas fa-user-circle userIcon"></i> </a>
+  </div>
+</header>

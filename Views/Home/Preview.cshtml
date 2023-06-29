@@ -1,0 +1,57 @@
+@model Product
+@{
+    string imgDataURL = Model.Image == null ? "" : Model.Image.ByteArrayToImg();
+}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CONTENT DETAILS | E-COMMERCE WEBSITE</title>
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo"
+      type="image/gif"
+      sizes="16x16" />
+    <!-- <link rel="stylesheet" href="/box1.css"> -->
+    <link rel="stylesheet" href="/css/contetDetails.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet" />
+    <!-- header links -->
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" asp-href-include="/css/footer.css" asp-append-version="true"/>
+    <link rel="stylesheet" asp-href-include="/css/header.css" asp-append-version="true"/>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <div id="1"></div>
+    @await Component.InvokeAsync("Header")
+    <div id="containerProduct">
+        <div id="containerD">
+            <div id="imageSection">
+                <img id="imgDetails" src="@imgDataURL" />
+                <div id="productDetails">
+                    <h1>@Model.Name</h1>
+                    <h4>@Model.Company</h4>
+                    <div id="details">
+                        <h3>SYP @Model.Price</h3>
+                        <h3>Description</h3>
+                        <p>@Model.Description</p>
+                        <div id="button">
+                            <a asp-controller="Home" asp-action="AddToCart" asp-route-Id="@Model.Id">
+                              <button>Add to Cart</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <div id="4"></div>
+    @await Component.InvokeAsync("Footer")
+  </body>
+</html>

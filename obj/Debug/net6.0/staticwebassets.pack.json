@@ -1,0 +1,105 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Lojain\\Desktop\\E-Commerce\\E-Commerce\\wwwroot\\css\\cart.css",
+      "PackagePath": "staticwebassets\\css\\cart.css"
+    },
+    {
+      "Id": "C:\\Users\\Lojain\\Desktop\\E-Commerce\\E-Commerce\\wwwroot\\css\\checkout.css",
+      "PackagePath": "staticwebassets\\css\\checkout.css"
+    },
+    {
+      "Id": "C:\\Users\\Lojain\\Desktop\\E-Commerce\\E-Commerce\\wwwroot\\css\\content.css",
+      "PackagePath": "staticwebassets\\css\\content.css"
+    },
+    {
+      "Id": "C:\\Users\\Lojain\\Desktop\\E-Commerce\\E-Commerce\\wwwroot\\css\\contetDetails.css",
+      "PackagePath": "staticwebassets\\css\\contetDetails.css"
+    },
+    {
+      "Id": "C:\\Users\\Lojain\\Desktop\\E-Commerce\\E-Commerce\\wwwroot\\css\\footer.css",
+      "PackagePath": "staticwebassets\\css\\footer.css"
+    },
+    {
+      "Id": "C:\\Users\\Lojain\\Desktop\\E-Commerce\\E-Commerce\\wwwroot\\css\\header.css",
+      "PackagePath": "staticwebassets\\css\\header.css"
+    },
+    {
+      "Id": "C:\\Users\\Lojain\\Desktop\\E-Commerce\\E-Commerce\\wwwroot\\css\\orderPlaced.css",
+      "PackagePath": "staticwebassets\\css\\orderPlaced.css"
+    },
+    {
+      "Id": "C:\\Users\\Lojain\\Desktop\\E-Commerce\\E-Commerce\\wwwroot\\img\\Womanjacket.jpg",
+      "PackagePath": "staticwebassets\\img\\Womanjacket.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lojain\\Desktop\\E-Commerce\\E-Commerce\\wwwroot\\img\\blouse.jpg",
+      "PackagePath": "staticwebassets\\img\\blouse.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lojain\\Desktop\\E-Commerce\\E-Commerce\\wwwroot\\img\\bluetooth headset.jpg",
+      "PackagePath": "staticwebassets\\img\\bluetooth headset.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lojain\\Desktop\\E-Commerce\\E-Commerce\\wwwroot\\img\\chothes.jpg",
+      "PackagePath": "staticwebassets\\img\\chothes.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lojain\\Desktop\\E-Commerce\\E-Commerce\\wwwroot\\img\\digital clock.jpg",
+      "PackagePath": "staticwebassets\\img\\digital clock.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lojain\\Desktop\\E-Commerce\\E-Commerce\\wwwroot\\img\\dress.jpg",
+      "PackagePath": "staticwebassets\\img\\dress.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lojain\\Desktop\\E-Commerce\\E-Commerce\\wwwroot\\img\\earphone.jpg",
+      "PackagePath": "staticwebassets\\img\\earphone.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lojain\\Desktop\\E-Commerce\\E-Commerce\\wwwroot\\img\\img1.png",
+      "PackagePath": "staticwebassets\\img\\img1.png"
+    },
+    {
+      "Id": "C:\\Users\\Lojain\\Desktop\\E-Commerce\\E-Commerce\\wwwroot\\img\\img2.png",
+      "PackagePath": "staticwebassets\\img\\img2.png"
+    },
+    {
+      "Id": "C:\\Users\\Lojain\\Desktop\\E-Commerce\\E-Commerce\\wwwroot\\img\\img3.png",
+      "PackagePath": "staticwebassets\\img\\img3.png"
+    },
+    {
+      "Id": "C:\\Users\\Lojain\\Desktop\\E-Commerce\\E-Commerce\\wwwroot\\img\\img4.png",
+      "PackagePath": "staticwebassets\\img\\img4.png"
+    },
+    {
+      "Id": "C:\\Users\\Lojain\\Desktop\\E-Commerce\\E-Commerce\\wwwroot\\img\\shoes.jpg",
+      "PackagePath": "staticwebassets\\img\\shoes.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lojain\\Desktop\\E-Commerce\\E-Commerce\\wwwroot\\img\\touch watch.jpg",
+      "PackagePath": "staticwebassets\\img\\touch watch.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lojain\\Desktop\\E-Commerce\\E-Commerce\\wwwroot\\img\\wristwatch.jpg",
+      "PackagePath": "staticwebassets\\img\\wristwatch.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.E-Commerce.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.E-Commerce.props",
+      "PackagePath": "build\\E-Commerce.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.E-Commerce.props",
+      "PackagePath": "buildMultiTargeting\\E-Commerce.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.E-Commerce.props",
+      "PackagePath": "buildTransitive\\E-Commerce.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

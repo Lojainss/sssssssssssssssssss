@@ -1,0 +1,16 @@
+@model Product
+@{
+    string imgDataURL = Model.Image == null ? "" : Model.Image.ByteArrayToImg();
+}
+<div id="box">
+    <a asp-controller="Home" asp-action="Preview" asp-route-Id="@Model.Id">
+        <img src = "@imgDataURL" />
+        <div id="details">
+            <h3>@Model.Name</h3>
+            <h4>@Model.Company</h4>
+            <h2>SYP @Model.Price</h2>
+        </div>
+    </a>
+</div>
+
+
